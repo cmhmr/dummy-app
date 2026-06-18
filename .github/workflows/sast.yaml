@@ -1,0 +1,4 @@
+jobs:
+  security-scan:
+    uses: cmhmr/appsec-workflows/.github/workflows/fortify-sast.yaml
+    secrets: inherit
