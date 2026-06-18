@@ -1,10 +1,9 @@
 name: fortify sast scan
 on:
   push:
-    branches: [ $default-branch, $protected-branches ]
+    branches:
+      - main
   pull_request:
-    # The branches below must be a subset of the branches above
-    branches: [ $default-branch ]
 jobs:
   security-scan:
     uses: cmhmr/appsec-workflows/.github/workflows/fortify-sast.yaml@main
