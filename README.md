@@ -48,3 +48,5 @@ This is a console application. All output is shown in the terminal window. For b
 
 ---
 *This project was created with the assistance of GitHub Copilot for code and documentation generation.*
+
+# Github action added for sast
