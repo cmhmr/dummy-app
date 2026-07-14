@@ -1,4 +1,4 @@
-# VulnerableApp: OWASP Top 10 Vulnerabilities Demo (Python)
+# VulnerableApp: OWASP Top 10 Vulnerabilities Demo (Python) for PROD
 
 This project demonstrates the most relevant vulnerabilities from the OWASP Top 10 in a simple, executable Python application. Each vulnerability is implemented with a minimal example and has a corresponding unit test. This is intended for SAST (Static Application Security Testing) scanner demonstrations and educational purposes only.
 
