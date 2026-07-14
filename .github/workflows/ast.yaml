@@ -1,0 +1,15 @@
+name: Application Security Testing
+on:
+  push:
+    branches:
+      - development
+      - stage
+      - production
+jobs:
+  fortify-scan:
+    uses: cmhmr/workflows-library/.github/workflows/run-fod-poetry.yaml@main
+    secrets: inherit
+    with:
+      python-version: '3.10'
+      sdlc-status: "Production"
+      
