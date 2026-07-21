@@ -1,0 +1,16 @@
+name: Application Security Testing
+on:
+  push:
+    branches:
+      - main
+jobs:
+  fortify-scan:
+    uses: cmhmr/workflows-library/.github/workflows/run-fod-drupal.yaml@main
+    secrets: inherit
+    with:
+      # python-version: "3.10" # default: 3.13
+      php-version: '8.3' # default 8.3
+      release-name: "Dev"
+      # sdlc-status: "Development" # Possible values: Development (default), Production, QA, Retired
+      # application-type: "Web_Thick_Client" # Web_Thick_Client (default), Mobile
+      # application-criticality: "Medium" # High, Medium (default), Low
