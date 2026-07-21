@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - main
+permissions:
+  contents: read
+  security-events: write
 jobs:
   fortify-scan:
     uses: cmhmr/workflows-library/.github/workflows/run-fod-drupal.yaml@main
