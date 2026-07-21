@@ -15,5 +15,5 @@ jobs:
       php-version: '8.3' # default 8.3
       release-name: "Dev"
       # sdlc-status: "Development" # Possible values: Development (default), Production, QA, Retired
-      # application-type: "Web_Thick_Client" # Web_Thick_Client (default), Mobile
+      # application-type: "Web" # [Web(default), ThickClient, Mobile, Microservice]
       # application-criticality: "Medium" # High, Medium (default), Low
