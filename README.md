@@ -1,4 +1,4 @@
-# VulnerableApp: OWASP Top 10 Vulnerabilities Demo (Python).
+# VulnerableApp: OWASP Top 10 Vulnerabilities Demo (Python)
 
 ## Description
 
