@@ -18,3 +18,4 @@ jobs:
       # sdlc-status: "Development" # Possible values: Development (default), Production, QA, Retired
       # application-type: "Web" # [Web(default), ThickClient, Mobile, Microservice]
       # application-criticality: "Medium" # High, Medium (default), Low
+      # entitlement-frequency: "Subscription(default)|SingleScan"
