@@ -1,4 +1,4 @@
-name: iMotion CI
+name: FOD MsBuild with NuGet
 on: 
   push:
     branches:
@@ -23,12 +23,10 @@ jobs:
     # uses: ASOD/workflows-library/.github/workflows/run-fod-python.yaml@main
     secrets: inherit
     with:
+      runner-version: windows-2022
+      checkout-paths: iMotion
       # python-version: "3.10" # default: 3.13
       # php-version: '8.3' # default 8.3
-      runner-version: windows-2022
-      checkout-paths: | 
-        iMotion
-        .github
       sln-name: "iMotion/SampleApp.sln"
       release-name: ${{ github.ref_name }} # Or suggested releases names: Dev|Stage|Prod
       sdlc-status: "Development" # Possible values: Development (default), Production, QA, Retired
