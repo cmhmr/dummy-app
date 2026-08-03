@@ -1,4 +1,5 @@
-name: Setup for NodeJs
+name: FOD NodeJS in Ubuntu
+description: FOD NodeJS in Ubuntu
 on: 
   push:
     branches:
@@ -24,9 +25,7 @@ jobs:
     secrets: inherit
     with:
       runner-version: ubuntu-latest # windows-2022
-      checkout-paths: | 
-        javascript/**
-        .github
+      checkout-paths: javascript
       # python-version: "3.10" # default: 3.13
       # php-version: '8.3' # default 8.3
       node-version: 24
