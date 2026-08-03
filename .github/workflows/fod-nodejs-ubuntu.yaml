@@ -6,7 +6,7 @@ on:
       - main
       - MS-SecurityIssues_2
     paths:
-      - 'javascript/**'
+      - 'react/**'
   pull_request:
     branches:
       - MS-SecurityIssues_2
@@ -14,7 +14,7 @@ on:
       - opened
       - synchronize
     paths:
-      - 'javascript/**'
+      - 'react/**'
 permissions:
   contents: read
   security-events: write
@@ -25,12 +25,12 @@ jobs:
     secrets: inherit
     with:
       runner-version: ubuntu-latest # windows-2022
-      checkout-paths: javascript
+      checkout-paths: react
       # python-version: "3.10" # default: 3.13
       # php-version: '8.3' # default 8.3
       node-version: 24
       # sln-name: "iMotion/SampleApp.sln"
-      release-name: "Dev-Node" # ${{ github.ref_name }} # Or suggested releases names: Dev|Stage|Prod
+      release-name: "Dev-react" # ${{ github.ref_name }} # Or suggested releases names: Dev|Stage|Prod
       sdlc-status: "Development" # Possible values: Development (default), Production, QA, Retired
       # application-type: "Web" # [Web(default), ThickClient, Mobile, Microservice]
       # application-criticality: "Medium" # High, Medium (default), Low
