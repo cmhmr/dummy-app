@@ -1,1 +1,1 @@
-# Sample as
+# Sample as C#
