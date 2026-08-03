@@ -4,7 +4,7 @@ This project demonstrates the most relevant vulnerabilities from the OWASP Top 1
 
 ## Structure
 - `main.py`: Main entry point and vulnerable endpoints.
-- `vulnerabilities/`: Contains modules for each vulnerability.
+- `vulnerabilities/`: Contains modules for each vulnerability.asd
 - `tests/`: Unit tests for each vulnerability. Python
 
 ## Included Vulnerabilities
