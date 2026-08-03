@@ -1,4 +1,5 @@
-name: Setup for NodeJs
+name: FOD Python with Poetry
+description: FOD Python with Poetry
 on: 
   push:
     branches:

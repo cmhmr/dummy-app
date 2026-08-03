@@ -1,4 +1,5 @@
 name: FOD MsBuild with NuGet
+description: FOD MsBuild with NuGet
 on: 
   push:
     branches:
