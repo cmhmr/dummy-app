@@ -25,7 +25,7 @@ jobs:
     with:
       runner-version: ubuntu-latest # windows-2022
       checkout-paths: | 
-        javascript
+        javascript/**
         .github
       # python-version: "3.10" # default: 3.13
       # php-version: '8.3' # default 8.3
