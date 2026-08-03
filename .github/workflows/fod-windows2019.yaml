@@ -1,14 +1,21 @@
 name: iMotion CI
 on: 
   push:
-    branches: [MS-SecurityIssues_2]
+    branches:
+      - MS-SecurityIssues_2
     paths:
       - 'iMotion/**'
   pull_request:
-    branches: [MS-SecurityIssues_2]
-    types: [opened, synchronize]
+    branches:
+      - MS-SecurityIssues_2
+    types: 
+      - opened
+      - synchronize
     paths:
       - 'iMotion/**'
+permissions:
+  contents: read
+  security-events: write
 jobs:
   ast:
     uses: cmhmr/workflows-library/.github/workflows/run-fod-msbuild.yaml@main
