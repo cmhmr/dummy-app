@@ -1,14 +1,21 @@
 name: iMotion CI
 on: 
   push:
-    branches: [MS-SecurityIssues_2]
+    branches:
+      - MS-SecurityIssues_2
     paths:
       - 'iMotion/**'
   pull_request:
-    branches: [MS-SecurityIssues_2]
-    types: [opened, synchronize]
+    branches:
+      - MS-SecurityIssues_2
+    types: 
+      - opened
+      - synchronize
     paths:
       - 'iMotion/**'
+permissions:
+  contents: read
+  security-events: write
 jobs:
   ast:
     uses: cmhmr/workflows-library/.github/workflows/run-fod-msbuild.yaml@main
@@ -17,7 +24,9 @@ jobs:
     with:
       # python-version: "3.10" # default: 3.13
       # php-version: '8.3' # default 8.3
-      runner-version: windows-2019
+      runner-version: windows-2022
+      checkout-paths: | 
+        iMotion
       sln-name: "iMotion/SampleApp.sln"
       release-name: ${{ github.ref_name }} # Or suggested releases names: Dev|Stage|Prod
       sdlc-status: "Development" # Possible values: Development (default), Production, QA, Retired
