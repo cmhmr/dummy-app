@@ -24,7 +24,7 @@ This project demonstrates the most relevant vulnerabilities from the OWASP Top 1
 ### Prerequisites
 - Python 3.8 or later
 
-### Install dependencies
+### Install dependenciesq
 ```sh
 pip install -r requirements.txt
 ```
