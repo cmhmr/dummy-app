@@ -1,0 +1,40 @@
+name: Setup for NodeJs
+on: 
+  push:
+    branches:
+      - main
+      - MS-SecurityIssues_2
+    paths:
+      - 'dummy-python-app/**'
+  pull_request:
+    branches:
+      - MS-SecurityIssues_2
+    types: 
+      - opened
+      - synchronize
+    paths:
+      - 'dummy-python-app/**'
+permissions:
+  contents: read
+  security-events: write
+jobs:
+  ast:
+    uses: cmhmr/workflows-library/.github/workflows/run-fod-python.yaml@main
+    # uses: ASOD/workflows-library/.github/workflows/run-fod-python.yaml@main
+    secrets: inherit
+    with:
+      runner-version: ubuntu-latest # windows-2022
+      checkout-paths: | 
+        javascript
+        .github
+      # python-version: "3.10" # default: 3.13
+      # php-version: '8.3' # default 8.3
+      node-version: 24
+      # sln-name: "iMotion/SampleApp.sln"
+      release-name: "Dev-Node" # ${{ github.ref_name }} # Or suggested releases names: Dev|Stage|Prod
+      sdlc-status: "Development" # Possible values: Development (default), Production, QA, Retired
+      # application-type: "Web" # [Web(default), ThickClient, Mobile, Microservice]
+      # application-criticality: "Medium" # High, Medium (default), Low
+      # entitlement-frequency: "Subscription(default)|SingleScan"
+
+ 

@@ -1,10 +1,11 @@
-name: iMotion CI
+name: Setup for NodeJs
 on: 
   push:
     branches:
+      - main
       - MS-SecurityIssues_2
     paths:
-      - 'iMotion/**'
+      - 'javascript/**'
   pull_request:
     branches:
       - MS-SecurityIssues_2
@@ -12,23 +13,25 @@ on:
       - opened
       - synchronize
     paths:
-      - 'iMotion/**'
+      - 'javascript/**'
 permissions:
   contents: read
   security-events: write
 jobs:
   ast:
-    uses: cmhmr/workflows-library/.github/workflows/run-fod-msbuild.yaml@main
+    uses: cmhmr/workflows-library/.github/workflows/run-fod-nodejs.yaml@main
     # uses: ASOD/workflows-library/.github/workflows/run-fod-python.yaml@main
     secrets: inherit
     with:
+      runner-version: windows-2022 # ubuntu-latest
+      checkout-paths: | 
+        javascript
+        .github
       # python-version: "3.10" # default: 3.13
       # php-version: '8.3' # default 8.3
-      runner-version: windows-2022
-      checkout-paths: | 
-        iMotion
-      sln-name: "iMotion/SampleApp.sln"
-      release-name: ${{ github.ref_name }} # Or suggested releases names: Dev|Stage|Prod
+      node-version: 24
+      # sln-name: "iMotion/SampleApp.sln"
+      release-name: "Dev-Node" # ${{ github.ref_name }} # Or suggested releases names: Dev|Stage|Prod
       sdlc-status: "Development" # Possible values: Development (default), Production, QA, Retired
       # application-type: "Web" # [Web(default), ThickClient, Mobile, Microservice]
       # application-criticality: "Medium" # High, Medium (default), Low

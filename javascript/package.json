@@ -1,0 +1,20 @@
+{
+  "name": "vulnerable-app",
+  "version": "1.0.0",
+  "description": "OWASP Top 10 Vulnerabilities Demo (JavaScript)",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "chai": "^4.3.7"
+  }
+}
