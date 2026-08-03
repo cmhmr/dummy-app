@@ -1,11 +1,11 @@
 name: iMotion CI
 on: 
   push:
-    branches: [MS-SecurityIssues]
+    branches: [MS-SecurityIssues_1]
     paths:
       - 'iMotion/**'
   pull_request:
-    branches: [MS-SecurityIssues]
+    branches: [MS-SecurityIssues_1]
     types: [opened, synchronize]
     paths:
       - 'iMotion/**'
