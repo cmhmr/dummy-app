@@ -27,11 +27,11 @@ jobs:
       checkout-paths: | 
         javascript
         .github
-      # python-version: "3.10" # default: 3.13
+      python-version: "3.10" # default: 3.13
       # php-version: '8.3' # default 8.3
-      node-version: 24
+      # node-version: 24
       # sln-name: "iMotion/SampleApp.sln"
-      release-name: "Dev-Node" # ${{ github.ref_name }} # Or suggested releases names: Dev|Stage|Prod
+      release-name: "Dev-Python" # ${{ github.ref_name }} # Or suggested releases names: Dev|Stage|Prod
       sdlc-status: "Development" # Possible values: Development (default), Production, QA, Retired
       # application-type: "Web" # [Web(default), ThickClient, Mobile, Microservice]
       # application-criticality: "Medium" # High, Medium (default), Low
