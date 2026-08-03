@@ -16,6 +16,6 @@ A minimal React app bootstrapped with Vite.
 - `index.html` — app entry HTML
 - `src/main.jsx` — React app bootstrap
 - `src/App.jsx` — sample component
-- `src/index.css` — base styles
+- `src/index.css` — base styles 
 
 #
