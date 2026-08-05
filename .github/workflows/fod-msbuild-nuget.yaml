@@ -1,6 +1,7 @@
 name: FOD MsBuild with NuGet
 description: FOD MsBuild with NuGet
-on: 
+on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -26,13 +27,16 @@ jobs:
     with:
       runner-version: windows-2022
       checkout-paths: iMotion
-      # python-version: "3.10" # default: 3.13
-      # php-version: '8.3' # default 8.3
       sln-name: "iMotion/SampleApp.sln"
       release-name: ${{ github.ref_name }} # Or suggested releases names: Dev|Stage|Prod
       sdlc-status: "Development" # Possible values: Development (default), Production, QA, Retired
       # application-type: "Web" # [Web(default), ThickClient, Mobile, Microservice]
       # application-criticality: "Medium" # High, Medium (default), Low
       # entitlement-frequency: "Subscription(default)|SingleScan"
+      package-extra-opts: |
+        -include="**/bin/**"
+        -include="**/packages/**"
+        -include="**/obj/**"
+        -include="**/vendor/**"
 
  
